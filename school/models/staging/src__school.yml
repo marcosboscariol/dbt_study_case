@@ -1,0 +1,13 @@
+version: 2
+
+sources:
+  - name: school
+    database: inttegra_stage
+    tables:
+      - name: dim__date
+      - name: raw__attendence
+      - name: raw__course
+      - name: raw__course_details
+      - name: raw__grades
+      - name: raw__student
+      - name: raw__teacher
