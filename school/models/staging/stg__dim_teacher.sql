@@ -7,6 +7,6 @@ WITH source AS (
 
 SELECT
     id_teacher,
-    name AS techar_name
+    name AS teacher_name
 FROM
     source

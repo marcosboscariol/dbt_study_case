@@ -1,0 +1,14 @@
+version: 2
+
+models:
+  - name: stg__dim_student
+    description: "Staging table for dim_student"
+    columns:
+      - name: id_student
+        description: "Primary Key fot dim_student"
+        tests:
+          - not_null
+      - name: student_name
+        description: "Student's name"
+        tests:
+          - not_null

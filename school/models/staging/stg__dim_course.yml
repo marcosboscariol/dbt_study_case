@@ -1,0 +1,33 @@
+version: 2
+
+models:
+  - name: stg__dim_course
+    description: "Staging table for dim_course"
+    columns:
+      - name: id_course
+        description: "Primary Key fot dim_course"
+        tests:
+          - not_null
+      - name: course_name
+        description: "Course's Name"
+        tests:
+          - not_null
+          - accepted_values:
+              name: "dim_course accepted names"
+              values:
+                - Data Science
+                - Machine Learning
+                - Cybersecurity
+                - Cloud Computing
+                - Software Engineering
+                - Artificial Intelligence
+                - Business Analytics
+                - Web Development
+                - Mobile App Development
+                - Game Design
+                - Digital Marketing
+                - Blockchain Technology
+                - Computer Vision
+                - Internet of Things (IoT)
+                - Big Data Analytics
+                - Network Security

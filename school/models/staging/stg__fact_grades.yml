@@ -1,0 +1,34 @@
+version: 2
+
+models:
+  - name: stg__fact_grades
+    description: "Staging table for fact_grades"
+    columns:
+      - name: date
+        description: "Foreign key to dim_date"
+        tests:
+          - not_null
+          - relationships:
+              to: ref('stg__dim_date')
+              field: date
+      - name: id_course
+        description: "Foreign key to dim_course"
+        tests:
+          - not_null
+          - relationships:
+              to: ref('stg__dim_course')
+              field: id_course
+      - name: id_student
+        description: "Foreign key to dim_student"
+        tests:
+          - not_null
+          - relationships:
+              to: ref('stg__dim_student')
+              field: id_student
+      - name: grade
+        description: "Students grade of the courses"
+        tests:
+          - not_null
+          - dbt_utils.expression_is_true:
+              expression: "BETWEEN 0 AND 10"
+              severity: warn

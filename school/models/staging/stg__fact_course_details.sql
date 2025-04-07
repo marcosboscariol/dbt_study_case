@@ -9,6 +9,6 @@ SELECT
     date,
     id_course,
     id_teacher,
-    minimum_grade
+    minimum_grade::numeric AS minimum_grade
 FROM
     source

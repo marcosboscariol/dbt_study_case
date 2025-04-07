@@ -1,0 +1,38 @@
+version: 2
+
+models:
+  - name: stg__dim_date
+    description: "Staging table for dim_date"
+    columns:
+      - name: date
+        description: "Primary Key fot dim_date"
+        tests:
+          - not_null
+      - name: year
+        description: "Year value"
+        tests:
+          - not_null
+      - name: month_number
+        description: "Number of the Month"
+        tests:
+          - not_null
+      - name: day
+        description: "Day value"
+        tests:
+          - not_null
+      - name: month_name
+        description: "Month's Name"
+        tests:
+          - not_null
+      - name: quarter
+        description: "Quarter Value"
+        tests:
+          - not_null
+          - accepted_values:
+              name: "dim_date accepted values"
+              values:
+                - Q1
+                - Q2
+                - Q3
+                - Q4
+        

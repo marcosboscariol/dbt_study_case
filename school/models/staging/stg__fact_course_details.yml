@@ -1,0 +1,36 @@
+version: 2
+
+models:
+  - name: stg__fact_course_details
+    description: "Staging table for fact_course_details"
+    columns:
+      - name: date
+        description: ""
+        tests:
+          - not_null
+          - relationships:
+              to: ref('stg__dim_date')
+              field: date
+          - dbt_utils.expression_is_true:
+              expression: "= date_trunc('quarter', date)" # Verify if the date is on the first day of a quarter
+      - name: id_course
+        description: "Foreign key to dim_course"
+        tests:
+          - not_null
+          - relationships:
+              to: ref('stg__dim_course')
+              field: id_course
+      - name: id_teacher
+        description: "Foreign key to dim_teacher"
+        tests:
+          - not_null
+          - relationships:
+              to: ref('stg__dim_teacher')
+              field: id_teacher
+      - name: minimum_grade
+        description: "Minimum grade to be approved on courses"
+        tests:
+          - not_null
+          - dbt_utils.expression_is_true:
+              expression: "BETWEEN 5 AND 7"
+              severity: warn
