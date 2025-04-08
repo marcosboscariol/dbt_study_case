@@ -8,6 +8,7 @@ models:
         description: "Primary Key fot dim_teacher"
         tests:
           - not_null
+          - unique
       - name: teacher_name
         description: "Teacher's name"
         tests:

@@ -1,8 +1,8 @@
 version: 2
 
 models:
-  - name: stg__fact_course_details
-    description: "Staging table for fact_course_details"
+  - name: stg__dim_course_details
+    description: "Staging table for dim_course_details"
     columns:
       - name: date
         description: ""

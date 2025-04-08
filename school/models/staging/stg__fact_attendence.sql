@@ -6,9 +6,9 @@ WITH source AS (
 )
 
 SELECT
-    date,
-    id_student,
-    id_course,
-    abscence
+    date::DATE,
+    id_student::VARCHAR,
+    id_course::VARCHAR,
+    abscence::INT
 FROM
     source

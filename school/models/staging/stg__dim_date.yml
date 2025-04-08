@@ -8,6 +8,7 @@ models:
         description: "Primary Key fot dim_date"
         tests:
           - not_null
+          - unique
       - name: year
         description: "Year value"
         tests:

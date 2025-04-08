@@ -6,6 +6,6 @@ WITH source AS (
 )
 
 SELECT
-    id_course,
-    course_name
+    id_course::VARCHAR,
+    course_name::VARCHAR
 FROM source

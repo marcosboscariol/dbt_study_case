@@ -6,9 +6,9 @@ WITH source AS (
 )
 
 SELECT
-    date,
-    id_course,
-    id_teacher,
-    minimum_grade::numeric AS minimum_grade
+    date::DATE,
+    id_course::VARCHAR,
+    id_teacher::VARCHAR,
+    minimum_grade::NUMERIC AS minimum_grade
 FROM
     source

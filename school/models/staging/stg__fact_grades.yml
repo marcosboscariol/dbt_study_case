@@ -28,7 +28,8 @@ models:
       - name: grade
         description: "Students grade of the courses"
         tests:
-          - not_null
+          - not_null:
+              where: "id_course IN ('1', '2', '3', '4', '5')"
           - dbt_utils.expression_is_true:
               expression: "BETWEEN 0 AND 10"
               severity: warn

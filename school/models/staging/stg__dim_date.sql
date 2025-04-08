@@ -6,11 +6,11 @@ WITH source AS(
 )
 
 SELECT
-    date,
-    year,
-    quarter,
-    month_number,
-    month_name,
-    day
+    date::DATE,
+    year::NUMERIC,
+    quarter::VARCHAR,
+    month_number::NUMERIC,
+    month_name::VARCHAR,
+    day::NUMERIC
 FROM
     source

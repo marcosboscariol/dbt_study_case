@@ -6,7 +6,7 @@ WITH source AS (
 )
 
 SELECT
-    id_student,
-    name AS student_name
+    id_student::VARCHAR,
+    name::VARCHAR AS student_name
 FROM
     source
