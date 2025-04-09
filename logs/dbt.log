@@ -68,3 +68,31 @@ Runtime Error
 [0m23:17:25.574798 [debug] [MainThread]: Command `dbt test` failed at 23:17:25.574798 after 0.08 seconds
 [0m23:17:25.575802 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021753191090>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002175A90F590>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002175A90F010>]}
 [0m23:17:25.576801 [debug] [MainThread]: Flushing usage events
+[0m14:09:27.646815 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021F780AC990>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021F7BBF4450>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021F7B7BCF50>]}
+
+
+============================== 14:09:27.650461 | a62a25a7-3283-4930-9aaf-1bfcf403dc8d ==============================
+[0m14:09:27.650461 [info ] [MainThread]: Running with dbt=1.7.3
+[0m14:09:27.651504 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'profiles_dir': 'C:\\Users\\marco\\.dbt', 'log_path': 'logs', 'debug': 'False', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt test -s dm__fact_grades_students', 'static_parser': 'True', 'introspect': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m14:09:27.652469 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path C:\Users\marco\OneDrive\Documentos\triade\dbt_study_case\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m14:09:27.653467 [debug] [MainThread]: Command `dbt test` failed at 14:09:27.653467 after 0.06 seconds
+[0m14:09:27.654505 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021F7BBF6790>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021F74430FD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000021F7B7DD5D0>]}
+[0m14:09:27.655470 [debug] [MainThread]: Flushing usage events
+[0m13:35:50.431137 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F82E7162D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F82E490350>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F82E714490>]}
+
+
+============================== 13:35:50.439831 | ff6be23d-40b0-44da-83b3-521bd3721155 ==============================
+[0m13:35:50.439831 [info ] [MainThread]: Running with dbt=1.7.3
+[0m13:35:50.440800 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\marco\\.dbt', 'debug': 'False', 'fail_fast': 'False', 'log_path': 'logs', 'version_check': 'True', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'static_parser': 'True', 'log_format': 'default', 'target_path': 'None', 'invocation_command': 'dbt run -s stg__dim_course_details', 'send_anonymous_usage_stats': 'True'}
+[0m13:35:50.441794 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path C:\Users\marco\OneDrive\Documentos\triade\dbt_study_case\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m13:35:50.444138 [debug] [MainThread]: Command `dbt run` failed at 13:35:50.442829 after 0.13 seconds
+[0m13:35:50.445146 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F82E703710>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F827410F90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F82E7DE510>]}
+[0m13:35:50.445700 [debug] [MainThread]: Flushing usage events

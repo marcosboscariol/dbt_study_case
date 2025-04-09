@@ -1,0 +1,38 @@
+version: 2
+
+models:
+  - name: dm__fact_grades_student
+    description: "Fact table about student grades tailored for the students"
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns:
+            - id_student
+            - id_course
+            - date
+    columns:
+      - name: date
+        description: ""
+        tests:
+          - not_null
+          - relationships:
+              to: ref('stg__dim_date')
+              field: date
+      - name: id_course
+        description: "Foreign Key for dim_course"
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dm__dim_course')
+              field: id_course
+      - name: id_student
+        description: "Foreign Key for dim_student"
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dm__dim_student')
+              field: id_student
+      - name: grade
+        tests:
+          - not_null
+          - dbt_utils.expression_is_true:
+              expression: ">= 0 AND grade <= 10"
