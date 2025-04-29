@@ -36,4 +36,7 @@ models:
 
 tests:
   school:
-    severity: warn
+    +severity: warn
+    models:
+      data_marts:
+        +severity: error
