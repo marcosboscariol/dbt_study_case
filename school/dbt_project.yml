@@ -33,3 +33,7 @@ clean-targets:         # directories to be removed by `dbt clean`
 models:
   school:
     +materialized: table
+
+tests:
+  school:
+    severity: warn

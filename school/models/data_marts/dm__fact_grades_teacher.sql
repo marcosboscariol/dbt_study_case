@@ -8,7 +8,6 @@ grades AS (
     FROM {{ ref('stg__fact_grades') }}
 ),
 
--- Relaciona a dimensão correta no tempo
 matched_grades AS (
     SELECT
         grades.date,
@@ -25,12 +24,11 @@ matched_grades AS (
         AND (grades.date < course_details.valid_to OR course_details.valid_to IS NULL)
 )
 
--- Agora monta a fato usando a FK
 SELECT
     date,
     id_course,
     id_teacher,
-    sk_course_details,  -- 🔑 FK da dimensão histórica
+    sk_course_details,
     ROUND(AVG(grade), 2) AS grades_average
 FROM 
     matched_grades
